@@ -70,7 +70,7 @@
     <div class="info-small visible-xs">
         <h5>欢迎来到我的博客 FEer！</h5>
         <h6>本页面为响应式布局</h6>
-        <a class="btn btn-success btn-sm" id="goTo">随便看看</a>
+        <a class="btn btn-success btn-sm" id="goTo-sm">随便看看</a>
     </div>
   </section>
 
@@ -267,6 +267,9 @@
     })
 
     $("#goTo").bind("click",function(){
+      $("html,body").animate({scrollTop:parseInt($("#subNav").offset().top)-60+"px"},300);
+    })
+    $("#goTo-sm").bind("click",function(){
       $("html,body").animate({scrollTop:parseInt($("#subNav").offset().top)-60+"px"},300);
     })
 
